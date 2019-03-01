@@ -1,9 +1,28 @@
-#include <string>
-#include <thread>
+#include "HttpRequest.h"
+#include "HttpResponse.h"
 #include <iostream>
+#include <sstream>
 
-int main()
+// web-client should be called as
+// ./web-cient [URL] [URL] ...
+int main(int argc, char* argv[])
 {
-  std::cerr << "web client is not implemented yet" << std::endl;
-  // do your stuff here! or not if you don't want to.
+
+  HttpRequest request;
+
+  request.setMethod("GET");
+  request.setUrl(argv[1]);
+  request.setBody("Body");
+  std::cout << request.encode() << endl << endl;
+
+
+  HttpResponse response;
+
+  response.setStatus(200);
+  response.setStatusMessage("OK");
+  response.setBody("BODY of response");
+
+  std::cout << response.encode();
+
+
 }

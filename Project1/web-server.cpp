@@ -1,9 +1,22 @@
-#include <string>
-#include <thread>
-#include <iostream>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
 
-int main()
+#include <iostream>
+#include <sstream>
+
+#define NUM_ARG 4
+
+// Program call:  web-server [hostname] [port] [file-dir]
+int main(int argc, char* argv[])
 {
-  std::cerr << "web server is not implemented yet" << std::endl;
-  // do your stuff here! or not if you don't want to.
-}
+  if (argc < NUM_ARG){
+    std::cout << "Bad function call" << std::endl;
+    return 0;
+  }
+
+  int status;
+  
+
+  return 0;
+} 
