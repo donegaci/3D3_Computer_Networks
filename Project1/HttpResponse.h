@@ -43,8 +43,6 @@ class HttpResponse{
             return "HTTP/1.0 " + 
                 to_string(status) + " " 
                 + statusMessage + "\n"
-                + "Content-Type: text/plain\n"   
-                + "Content-Length: 12\n"
-                + "\nHello world!";
+                + "\n\n" + body;
         }
 };
