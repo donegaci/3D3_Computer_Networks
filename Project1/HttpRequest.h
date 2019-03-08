@@ -5,7 +5,7 @@ using namespace std;
 class HttpRequest {
     private:
         string method;
-        string url;
+        string resource;
         string body;
 
     public:
@@ -17,11 +17,11 @@ class HttpRequest {
         string getMethod(){
             return method;
         }
-        void setUrl(string url){
-            this->url = url;
+        void setResource(string resource){
+            this->resource = resource;
         }
-        string getUrl(){
-            return url;
+        string getResource(){
+            return resource;
         }
         void setBody(string body){
             this->body = body;
@@ -32,7 +32,7 @@ class HttpRequest {
         
         string encode(){
             return  getMethod() + " " 
-            + getUrl() + " "
+            + getResource() + " "
             + "HTTP/1.0\n";
         }
 };
