@@ -1,7 +1,7 @@
 CXX=g++
 CXXOPTIMIZE= -O2
-CXXFLAGS= -g -Wall -pthread -std=c++11 $(CXXOPTIMIZE)
-USERID=EDIT_MAKE_FILE
+CXXFLAGS= -g -Wall -pthread  $(CXXOPTIMIZE)
+USERID=CiaranDonegan_16322253
 CLASSES=
 
 all: web-server web-client
